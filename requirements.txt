@@ -2,3 +2,9 @@ mkdocs
 mkdocs-material
 mkdocs-static-i18n[material]
 mkdocstrings[python]
+pytest
+vcrpy
+typing_extensions
+pytest-asyncio
+pyquery
+loguru

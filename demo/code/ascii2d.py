@@ -1,13 +1,17 @@
 import asyncio
+import os
+import sys
 
-from demo.code.config import IMAGE_BASE_URL, PROXIES, get_image_path, logger
+from config import IMAGE_BASE_URL, PROXIES, get_image_path, logger
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(cur_dir, "..", ".."))  # Adjust the path as needed
 from PicImageSearch import Ascii2D, Network
 from PicImageSearch.model import Ascii2DResponse
 from PicImageSearch.sync import Ascii2D as Ascii2DSync
 
 base_url = "https://ascii2d.net"
 url = f"{IMAGE_BASE_URL}/test01.jpg"
-file = get_image_path("test01.jpg")
+file = get_image_path("Goh1gwLWEAEHcoJ.jpg")
 bovw = False  # Use feature search or not
 verify_ssl = True  # Whether to verify SSL certificates or not
 
@@ -29,8 +33,8 @@ def demo_sync() -> None:
         proxies=PROXIES,
         verify_ssl=verify_ssl,
     )
-    resp = ascii2d.search(url=url)
-    # resp = ascii2d.search(file=file)
+    # resp = ascii2d.search(url=url)
+    resp = ascii2d.search(file=file)
     show_result(resp)  # pyright: ignore[reportArgumentType]
 
 
@@ -51,5 +55,5 @@ def show_result(resp: Ascii2DResponse) -> None:
 
 
 if __name__ == "__main__":
-    asyncio.run(demo_async())
-    # demo_sync()
+    # asyncio.run(demo_async())
+    demo_sync()

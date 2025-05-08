@@ -95,7 +95,7 @@ class YandexResponse(BaseSearchResponse[YandexItem]):
         """
         data = parse_html(resp_data)
         self.origin: PyQuery = data
-        data_div = data.find('div.Root[id^="CbirSites_infinite"]')
+        data_div = data.find('div.Root[id^="ImagesApp-"]')
         data_state = data_div.attr("data-state")
 
         if not data_state:
@@ -106,5 +106,5 @@ class YandexResponse(BaseSearchResponse[YandexItem]):
             )
 
         data_json = json_loads(str(data_state))
-        sites = data_json["sites"]
+        sites = data_json['initialState']["cbirSitesList"]['sites']
         self.raw: list[YandexItem] = [YandexItem(site) for site in sites]

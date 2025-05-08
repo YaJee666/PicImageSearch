@@ -74,19 +74,19 @@ def engine_image_path_mapping() -> dict[str, str]:
     """Map engine names to corresponding test image paths"""
     base_path = "demo/images"
     return {
-        "animetrace": f"{base_path}/test05.jpg",
-        "ascii2d": f"{base_path}/test01.jpg",
-        "baidu": f"{base_path}/test02.jpg",
-        "bing": f"{base_path}/test08.jpg",
-        "copyseeker": f"{base_path}/test05.jpg",
-        "ehentai": f"{base_path}/test06.jpg",
-        "google": f"{base_path}/test03.jpg",
-        "googlelens": f"{base_path}/test05.jpg",
-        "iqdb": f"{base_path}/test01.jpg",
-        "saucenao": f"{base_path}/test01.jpg",
-        "tineye": f"{base_path}/test07.jpg",
-        "tracemoe": f"{base_path}/test05.jpg",
-        "yandex": f"{base_path}/test06.jpg",
+        "animetrace": f"{base_path}/Goh1gwLWEAEHcoJ.jpg",
+        "ascii2d": f"{base_path}/Goh1gwLWEAEHcoJ.jpg",
+        "baidu": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "bing": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "copyseeker": f"{base_path}/Goh1gwLWEAEHcoJ.jpg",
+        "ehentai": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "google": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "googlelens": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "iqdb": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "saucenao": f"{base_path}/Goh1gwLWEAEHcoJ.jpg",
+        "tineye": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
+        "tracemoe": f"{base_path}/Goh1gwLWEAEHcoJ.jpg",
+        "yandex": f"{base_path}/photo_2025-02-21_03-54-25.jpg",
     }
 
 
@@ -107,7 +107,7 @@ def engine_image_url_mapping() -> dict[str, str]:
         "saucenao": f"{base_url}/test01.jpg",
         "tineye": f"{base_url}/test07.jpg",
         "tracemoe": f"{base_url}/test05.jpg",
-        "yandex": f"{base_url}/test06.jpg",
+        "yandex": f"{base_url}/test07.jpg",
     }
 
 

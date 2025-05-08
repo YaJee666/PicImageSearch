@@ -20,7 +20,7 @@ class TestGoogle:
         return engine_image_url_mapping.get("google")
 
     @pytest.mark.asyncio
-    @pytest.mark.vcr("google_file_search.yaml")
+    # @pytest.mark.vcr("google_file_search.yaml")
     async def test_search_with_file(self, engine, test_image_path):
         result = await engine.search(file=test_image_path)
         assert len(result.raw) > 0

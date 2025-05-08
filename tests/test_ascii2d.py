@@ -20,13 +20,13 @@ class TestAscii2D:
         return engine_image_url_mapping.get("ascii2d")
 
     @pytest.mark.asyncio
-    @pytest.mark.vcr("ascii2d_file_search.yaml")
+    # @pytest.mark.vcr("ascii2d_file_search.yaml")
     async def test_search_with_file(self, engine, test_image_path):
         result = await engine.search(file=test_image_path)
         assert len(result.raw) > 0
 
     @pytest.mark.asyncio
-    @pytest.mark.vcr("ascii2d_url_search.yaml")
+    # @pytest.mark.vcr("ascii2d_url_search.yaml")
     async def test_search_with_url(self, engine, test_image_url):
         result = await engine.search(url=test_image_url)
         assert len(result.raw) > 0

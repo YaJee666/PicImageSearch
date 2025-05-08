@@ -17,7 +17,7 @@ class TestBaiDu:
         return engine_image_url_mapping.get("baidu")
 
     @pytest.mark.asyncio
-    @pytest.mark.vcr("baidu_file_search.yaml")
+    # @pytest.mark.vcr("baidu_file_search.yaml")
     async def test_search_with_file(self, engine, test_image_path):
         result = await engine.search(file=test_image_path)
         assert len(result.raw) > 0
